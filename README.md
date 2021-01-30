@@ -47,40 +47,40 @@ To run the tests, run
 ##Endpoints
 ```
 
-GET 127.0.0.1:8000/lenme/list-investors
+GET  /lenme/list-investors
 
-GET 127.0.0.1:8000/lenme/list-investors/<int:pk>
+GET  /lenme/list-investors/<int:pk>
 
-GET 127.0.0.1:8000/lenme/list-investors/<int:pk>/offers
+GET  /lenme/list-investors/<int:pk>/offers
 
-GET 127.0.0.1:8000/lenme/list-borrowers
+GET  /lenme/list-borrowers
 
-GET 127.0.0.1:8000/lenme/list-borrowers/<int:pk>
+GET  /lenme/list-borrowers/<int:pk>
 
-GET 127.0.0.1:8000/lenme/list-borrowers/<int:pk>/loans
+GET  /lenme/list-borrowers/<int:pk>/loans
 
-GET 127.0.0.1:8000/lenme/list-loans
+GET  /lenme/list-loans
 
-GET 127.0.0.1:8000/lenme/list-loans/<int:pk>
+GET  /lenme/list-loans/<int:pk>
 
-GET 127.0.0.1:8000/lenme/list-loans/<int:pk>/offers
+GET  /lenme/list-loans/<int:pk>/offers
 
-POST 127.0.0.1:8000/lenme/create-investor
+POST  /lenme/create-investor
 
-POST 127.0.0.1:8000/lenme/create-borrower
+POST  /lenme/create-borrower
 
-POST 127.0.0.1:8000/lenme/create-loan
+POST  /lenme/create-loan
 
-POST 127.0.0.1:8000/lenme/create-offer
+POST  /lenme/create-offer
 
-POST 127.0.0.1:8000/lenme/accept-offer/<int:pk>/
+POST  /lenme/accept-offer/<int:pk>/
 
-POST 127.0.0.1:8000/lenme/make-single-payment/<int:pk>/
+POST  /lenme/make-single-payment/<int:pk>/
 ```
 
 # examples
 
-GET 127.0.0.1:8000/lenme/list-investors/<int:pk>/offers
+GET  "lenme/list-investors/<int:pk>/offers"
 
 -Returns:
 ```
@@ -118,7 +118,7 @@ Vary: Accept
 ]
 ```
 
-POST 127.0.0.1:8000/lenme/create-loan
+POST  "lenme/create-loan"
 
 Request Arguments: Borrower, amount, period
 example:
