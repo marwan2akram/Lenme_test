@@ -4,7 +4,7 @@
 * Python (3.5, 3.6, 3.7, 3.8, 3.9)
 * Django (2.2, 3.0, 3.1)
 
-We **highly recommend** and only officially support the latest patch release of
+it's **highly recommend** and only officially support the latest patch release of
 each Python and Django series.
 
 # Installation DRF
@@ -20,51 +20,75 @@ Add `'rest_framework'` to your `INSTALLED_APPS` setting.
         'rest_framework',
     ]
 
-#Creating Migrations
-	python manage.py makemigrations lenme
-   
-	python manage.py migrate
-   
-#Run Server
-	python manage.py runserver
+# Creating Migrations
 
-#create superuer
-	python manage.py createsuperuser
 
-## Testing
+	* python manage.py makemigrations lenme
+   
+	* python manage.py migrate
+   
+# Run Server
+
+
+	* python manage.py runserver
+
+# create superuser
+
+
+	* python manage.py createsuperuser
+
+# Testing
 To run the tests, run
-	python manage.py test
+
+
+	* python manage.py test
 
 
 ##Endpoints
+```
 
 GET 127.0.0.1:8000/lenme/list-investors
+
 GET 127.0.0.1:8000/lenme/list-investors/<int:pk>
+
 GET 127.0.0.1:8000/lenme/list-investors/<int:pk>/offers
+
 GET 127.0.0.1:8000/lenme/list-borrowers
+
 GET 127.0.0.1:8000/lenme/list-borrowers/<int:pk>
+
 GET 127.0.0.1:8000/lenme/list-borrowers/<int:pk>/loans
+
 GET 127.0.0.1:8000/lenme/list-loans
+
 GET 127.0.0.1:8000/lenme/list-loans/<int:pk>
+
 GET 127.0.0.1:8000/lenme/list-loans/<int:pk>/offers
+
 POST 127.0.0.1:8000/lenme/create-investor
+
 POST 127.0.0.1:8000/lenme/create-borrower
+
 POST 127.0.0.1:8000/lenme/create-loan
+
 POST 127.0.0.1:8000/lenme/create-offer
+
 POST 127.0.0.1:8000/lenme/accept-offer/<int:pk>/
+
 POST 127.0.0.1:8000/lenme/make-single-payment/<int:pk>/
+```
 
-
-#examples
+# examples
 
 GET 127.0.0.1:8000/lenme/list-investors/<int:pk>/offers
 
 -Returns:
-
+```
 HTTP 200 OK
 Allow: OPTIONS, GET
 Content-Type: application/json
 Vary: Accept
+
 
 [
     {
@@ -92,7 +116,7 @@ Vary: Accept
         "created_at": "2021-01-30T10:30:14.290155Z"
     }
 ]
-
+```
 
 POST 127.0.0.1:8000/lenme/create-loan
 
@@ -101,6 +125,7 @@ example:
 {"Borrower": 1, "amount": 5000, "period": 6}
 
 -Returns:
+```
 
 HTTP 201 Created
 Allow: OPTIONS, POST
@@ -117,7 +142,7 @@ Vary: Accept
     "created_at": "2021-01-30T15:53:21.741259Z",
     "updated_at": "2021-01-30T15:53:21.741302Z"
 }
-
+```
 
 
 
